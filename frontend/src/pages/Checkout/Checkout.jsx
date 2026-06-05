@@ -641,7 +641,7 @@ export const Checkout = () => {
                 )}
 
                 <motion.div className="flex justify-between text-sm" variants={itemVariants}>
-                  <span>Tax ({Math.round(TAX_RATE * 100)}%):</span>
+                  <span>Tax ({Math.round(pricing.taxRate * 100)}%):</span>
                   <span className="font-semibold">${tax.toFixed(2)}</span>
                 </motion.div>
 

@@ -169,8 +169,8 @@ app.get('/metrics', async (req, res) => {
  * Apply rate limiting to auth endpoints to prevent brute force attacks
  */
 const authRateLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5, // Limit each IP to 5 requests per windowMs
+  windowMs: 15 * 60 * 1000,
+  max: 100,
   message: {
     success: false,
     statusCode: 429,

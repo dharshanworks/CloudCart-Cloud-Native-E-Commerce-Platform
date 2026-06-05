@@ -235,10 +235,10 @@ export const Cart = () => {
               <h2 className="card-title mb-6 text-2xl">Order Summary</h2>
 
               {/* Free Shipping Progress */}
-              {subtotal < FREE_SHIPPING_THRESHOLD ? (
+              {subtotal < pricing.freeShippingThreshold ? (
                 <div className="mb-4 rounded-xl bg-base-200 p-3">
                   <p className="mb-2 text-sm text-base-content/70">
-                    Add <span className="font-semibold text-primary">${(FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2)}</span> more for free shipping!
+                    Add <span className="font-semibold text-primary">${(pricing.freeShippingThreshold - subtotal).toFixed(2)}</span> more for free shipping!
                   </p>
                   <div className="h-2 w-full overflow-hidden rounded-full bg-base-300">
                     <div
@@ -273,7 +273,7 @@ export const Cart = () => {
                 )}
 
                 <div className="flex justify-between">
-                  <span className="text-base-content/70">Tax ({Math.round(TAX_RATE * 100)}%):</span>
+                  <span className="text-base-content/70">Tax ({Math.round(pricing.taxRate * 100)}%):</span>
                   <span className="font-semibold">${tax.toFixed(2)}</span>
                 </div>
               </div>

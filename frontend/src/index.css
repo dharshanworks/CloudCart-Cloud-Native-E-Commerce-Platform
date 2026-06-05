@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --app-bg-top: #1a1a1a;
+  --app-bg-bottom: #0d0d0d;
+  --app-surface: #222222;
+  --app-border: #333333;
+
+  --p: 0 0% 100%;
+  --pc: 0 0% 0%;
+  --s: 0 0% 70%;
+  --sc: 0 0% 0%;
+  --a: 0 0% 85%;
+  --ac: 0 0% 0%;
+  --n: 0 0% 95%;
+  --nc: 0 0% 0%;
+  --b1: 0 0% 13%;
+  --b2: 0 0% 18%;
+  --b3: 0 0% 26%;
+  --bc: 0 0% 100%;
+
+  --in: 0 0% 40%;
+  --inc: 0 0% 100%;
+  --su: 0 0% 55%;
+  --suc: 0 0% 100%;
+  --wa: 0 0% 50%;
+  --wac: 0 0% 100%;
+  --er: 0 0% 100%;
+  --erc: 0 0% 0%;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top right, #333333 0%, transparent 35%),
+    radial-gradient(circle at top left, #262626 0%, transparent 25%),
+    linear-gradient(180deg, var(--app-bg-top) 0%, var(--app-bg-bottom) 100%);
+}
+
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
+
+.card,
+.modal-box,
+.dropdown-content,
+.navbar {
+  border-color: var(--app-border);
+}
